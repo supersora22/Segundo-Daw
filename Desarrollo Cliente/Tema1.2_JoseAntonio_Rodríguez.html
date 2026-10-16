@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica: 1.2</title>
+  <meta name="author" content="Jose"/>
+  <meta name="Index" content="actualizar"/>
+  <meta name="keywords" content="DAW, Algeciras, Kursaal"/>
+</head>
+<body>
+  <h1 id="encabezado">Modificando el código HTML</h1>
+  <p id="prueba">Modificando el contenido.</p>
+  
+  <button type="button" onclick="mostrarAlerta('Se ha hecho clic en el botón dale.')">¡Dale!</button>
+  <button type="button" onclick="mostrarAlerta('Se ha hecho clic en el botón mostrar alerta.')">Mostrar Alerta</button>
+
+  <p id="saludo">Selecciona un idioma para ver el saludo.</p>
+  <button type="button" onclick="escribirSaludo('Привет', 'Se ha hecho clic en el botón ruso.')">Ruso</button>
+  <button type="button" onclick="escribirSaludo('¡Hola!', 'Se ha hecho clic en el botón español.')">Español</button>
+  <button type="button" onclick="escribirSaludo('Hello!', 'Se ha hecho clic en el botón inglés.')">Inglés</button>
+
+  <h1>Panel de Control del Sistema</h1>
+  <p id="estado">Sistema en espera</p>
+  <button type="button" onclick="mostrarHoraConsola()">Consola</button>
+  <button type="button" onclick="activarSistema()">Estilo</button>
+  <button type="button" onclick="concluirProceso()">Alerta</button>
+
+  <h1>Test Interactivo de Programación Web</h1>
+  <p>Comprueba lo que has aprendido. Selecciona Verdadero o Falso:</p>
+
+  <div>
+    <p>1. HTML sirve para estructurar el contenido de una página web.</p>
+    <button type="button" onclick="evaluarRespuesta('r1', true)">Verdadero</button>
+    <button type="button" onclick="evaluarRespuesta('r1', false)">Falso</button>
+    <span id="r1"></span>
+  </div>
+
+  <div>
+    <p>2. console.log() muestra una ventana modal que bloquea la página.</p>
+    <button type="button" onclick="evaluarRespuesta('r2', false)">Verdadero</button>
+    <button type="button" onclick="evaluarRespuesta('r2', true)">Falso</button>
+    <span id="r2"></span>
+  </div>
+
+  <div>
+    <p>3. El método document.getElementById() necesita el atributo id del elemento.</p>
+    <button type="button" onclick="evaluarRespuesta('r3', true)">Verdadero</button>
+    <button type="button" onclick="evaluarRespuesta('r3', false)">Falso</button>
+    <span id="r3"></span>
+  </div>
+
+  <div>
+    <p>4. document.write() es la forma más recomendada para actualizar una web moderna.</p>
+    <button type="button" onclick="evaluarRespuesta('r4', false)">Verdadero</button>
+    <button type="button" onclick="evaluarRespuesta('r4', true)">Falso</button>
+    <span id="r4"></span>
+  </div>
+
+  <div>
+    <p>5. Para cambiar el color del texto en JavaScript se usa .style.backgroundColor.</p>
+    <button type="button" onclick="evaluarRespuesta('r5', false)">Verdadero</button>
+    <button type="button" onclick="evaluarRespuesta('r5', true)">Falso</button>
+    <span id="r5"></span>
+  </div>
+
+  <div>
+    <p>6. JavaScript utiliza CamelCase para propiedades CSS que tienen guion (ej. backgroundColor).</p>
+    <button type="button" onclick="evaluarRespuesta('r6', true)">Verdadero</button>
+    <button type="button" onclick="evaluarRespuesta('r6', false)">Falso</button>
+    <span id="r6"></span>
+  </div>
+
+  <div>
+    <p>7. La etiqueta button permite añadir eventos interactivos como onclick.</p>
+    <button type="button" onclick="evaluarRespuesta('r7', true)">Verdadero</button>
+    <button type="button" onclick="evaluarRespuesta('r7', false)">Falso</button>
+    <span id="r7"></span>
+  </div>
+
+  <script src="Tema1.2.js"></script>
+</body>
+</html>

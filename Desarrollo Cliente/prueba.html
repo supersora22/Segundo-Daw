@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculo IVA</title>
+</head>
+<body>
+	<style>
+		body {
+			background-color: #00b4fc;
+		}
+ </style>
+    <script type="text/javascript">
+        var preciobase;
+        preciobase = prompt("Teclee el precio base:");
+
+        alert("El precio base tecleado es: " + preciobase);
+        document.write("<h1 align='center'>El precio base tecleado es: " + preciobase + "</h1>");
+
+        function calcularIva() {
+            var tipo = document.getElementById("iva").value;
+            var total = 0;
+			if (preciobase <0 || preciobase == "") {
+				alert("Por favor, ingrese un precio base válido.");
+				return;
+			}
+
+            if (tipo == "General") {
+                total = preciobase * 1.21;
+            } else if (tipo == "Reducido") {
+                total = preciobase * 1.10;
+            } else if (tipo == "Superreducido") {
+                total = preciobase * 1.04;
+            }
+
+          alert("El precio final con IVA es: " + total);
+        }
+    </script>
+
+    <h1 align="center"><u>Tipo de IVA</u></h1>
+    
+    <table align="center" border="0" cellpadding="20" width="400" height="200" bgcolor="#cab17e">
+        <tr>
+            <td bgcolor="#3ef" align="center">
+                <select id="iva">
+                    <option value="General">General (21%)</option>
+                    <option value="Reducido">Reducido (10%)</option>
+                    <option value="Superreducido">Superreducido (4%)</option>
+                </select>
+
+                <br><br>
+
+                <input type="button" value="Calcular IVA" onclick="calcularIva()">
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
