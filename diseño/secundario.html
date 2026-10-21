@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página secundaria — Trabajo de incrustación</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #c7cdf4;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #382dfe;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background-color: #5891f3;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: black;
+            margin: 10px;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 15px;
+        }
+
+        section .Cabezera_interior {
+        background-color: #5891f3;
+        padding: 10px;
+        border-radius: 15px;
+        }
+    
+        section .Cabezera_interior h2 {
+        color: #030303;
+        text-align: center;
+        }
+
+        p {
+            color: #030303;
+        }
+
+        article, aside {
+            background-color: #c2f9ef;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+
+        h3 {
+            color: #030303;
+        }
+
+        iframe, img, object, embed, canvas {
+            max-width: 100%;
+        }
+
+        footer {
+            background-color: #5891f3;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer p {
+            color: #030303;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Página Secundaria</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">← Volver a la página principal</a>
+    </nav>
+
+    <main>
+        <section>
+            <div class="Cabezera_interior">
+                <h2>Contenido de la segunda página</h2>
+                <p>Esta página está enlazada desde <code>index.html</code> mediante un enlace con clase <code>.btn</code> y a su vez enlaza de vuelta al archivo principal.</p>
+            </div>
+
+            <div>
+                <article>
+                    <h3>iframe con un mapa de Google</h3>
+                    <p>Otro uso de <code>iframe</code>: incrustar un servicio de terceros sin salir de la página.</p>
+                    <iframe
+                        src="https://www.google.com/maps/search/Estepona+Spa/"
+                        width="600"
+                        height="400"
+                        style="border: 0;"
+                        allowfullscreen
+                        loading="lazy"
+                        title="Mapa de Google de Estepona Españita">
+                    </iframe>
+                </article>
+            </div>
+
+            <!-- Etiqueta img -->
+            <div>
+                <article>
+                    <h3>img y picture</h3>
+                    <p>Imagen vectorial externa declarada con <code>picture</code> y su <code>source</code>.</p>
+
+                    <picture>
+                        <source srcset="Algeciras.jpg" type="image/svg+xml">
+                        <img
+                            src="Algeciras.jpg"
+                            alt="Puerto de Algeciras"
+                            width="1200"
+                            height="500"
+                            style="max-width: 100%; height: auto;">
+                    </picture>
+                </article>
+            </div>
+
+            <div>
+                <article>
+                    <h3>object</h3>
+                    <p>Recurso externo con contenido de respaldo dentro de la etiqueta, por si el navegador no lo abre.</p>
+
+                    <object data="/puerto/Trabajo Inicial Diseño_Jose.pdf" type="application/pdf" width="100%" height="500">
+                        <p>Tu navegador no puede ver el PDF. <a href="../Tema 1.-Planificación de interfaces gráficas_15_16.pdf">Descárgalo aquí</a>.</p>
+                    </object>
+                </article>
+            </div>
+
+
+            <div>
+                <article>
+                    <h3>canvas</h3>
+                    <p>Lienzo de mapa de bits dibujado con JavaScript al final del documento.</p>
+
+                    <canvas id="miCanvas" width="400" height="200">
+                        Tu navegador no soporta la etiqueta <code>canvas</code>.
+                    </canvas>
+                </article>
+            </div>
+
+            <div>
+                <aside>
+                    <h3>embed</h3>
+                    <p>Ejemplo de PDF embebido.</p>
+
+                    <embed src="/puerto/Trabajo Inicial Diseño_Jose.pdf" type="application/pdf" width="100%" height="500"></embed>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Jose Antonio Rodriguez - Trabajo de HTML</p>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById("miCanvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "#ffff12";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "black";
+        ctx.font = "bold 16px Arial";
+        ctx.fillText("Uso de etiquetas HTML", 20, 25);
+
+        // Datos de las barras
+        const nombres = ["iframe", "video", "audio", "svg"];
+        const valores = [80, 120, 60, 150];
+
+        valores.forEach((valor, i) => {
+            const x = 30 + i * 90;
+            const y = 170 - valor;
+
+            ctx.fillStyle = "#3979c3";
+            ctx.fillRect(x, y, 45, valor);
+
+            ctx.strokeStyle = "#24558a";
+            ctx.strokeRect(x, y, 45, valor);
+
+            ctx.fillStyle = "black";
+            ctx.font = "12px Arial";
+            ctx.fillText(valor, x + 10, y - 5);
+
+            ctx.fillText(nombres[i], x - 3, 190);
+        });
+
+        ctx.beginPath();
+        ctx.moveTo(15, 170);
+        ctx.lineTo(390, 170);
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+        // Texto explicativo
+        ctx.fillStyle = "black";
+        ctx.font = "11px Arial";
+        ctx.fillText("Valores de ejemplo", 20, 215);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo de etiquetas incrustadas</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #c7cdf4;
+        color: #ffffff;
+    }
+
+    header {
+        background-color: #382dfe;
+        text-align: center;
+        padding: 15px;
+    }
+    header p{
+        color: #ffffff;
+    }
+
+    nav {
+        background-color: #5891f3;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: black;
+        margin: 10px;
+    }
+
+    main {
+        margin: 20px;
+    }
+
+    section {
+        background-color: white;
+        padding: 15px;
+    }
+
+    section .Cabezera_interior {
+        background-color: #5891f3;
+        padding: 10px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    section div {
+        background-color: #c2f9ef;
+        padding: 10px;
+        margin: 20px;
+        border-radius: 15px;
+    }
+
+    article {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        color: #030303;
+    }
+
+    h3 {
+        color: #030303;
+    }
+
+    iframe, video {
+        max-width: 100%;
+    }
+    p {
+        color: #030303;
+    }
+
+    footer {
+        background-color: #5891f3;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Julio Serrano Membrive 2ºY DAW</h1>
+        <p>Ejemplos de contenido incrustado en HTML</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Página principal</a>
+        <a href="secundario.html">Página secundaria</a>
+        <a href="">Github</a>
+    </nav>
+
+    <main id="inicio">
+
+        <section>
+            <div class="Cabezera_interior">
+                <h2>Contenido incrustado</h2>
+                <p>Tabla 6.1: ejemplos de las etiquetas de contenido incrustado.</p>
+            </div>
+
+            <div>
+                <article>
+                    <h3>1. Etiqueta iframe</h3>
+
+                        <p>
+                            La etiqueta iframe permite mostrar contenido de otra
+                            página web dentro de la nuestra, como un vídeo de YouTube
+                            o un mapa.
+                        </p>
+
+                    <iframe
+                        src="https://www.youtube.com/embed/VKdx96GitYA?si=Vn-qtyjDl07RALIj"
+                        width="560"
+                        height="315"
+                        title="Vídeo de YouTube"
+                        allowfullscreen>
+                    </iframe>
+                </article>
+            </div>
+
+            <div>
+                <article>
+                    <h3>2. Etiquetas video y source</h3>
+
+                        <p>
+                            La etiqueta video sirve para reproducir vídeos en
+                            nuestra web. La etiqueta source indica dónde está
+                            guardado el archivo y qué tipo de vídeo es.
+                        </p>
+
+                    <video controls preload="metadata">
+                        <source src="videoplayback.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este vídeo.
+                    </video>
+                </article>
+            </div>
+
+            <div>
+                <article>
+                    <h3>3. Etiquetas audio y source</h3>
+
+                        <p>
+                            La etiqueta audio permite escuchar sonidos o música
+                            desde la página. Source indica el archivo de audio
+                            que se va a reproducir.
+                        </p>
+
+                    <audio controls preload="none">
+                        <source src="KH.mp3" type="audio/mpeg">
+                        Tu navegador no puede reproducir este audio.
+                    </audio>
+                </article>
+            </div>
+
+            <div>
+                <article>
+                    <h3>4. Etiqueta svg</h3>
+
+                        <p>
+                            La etiqueta svg permite crear dibujos mediante formas
+                            geométricas, como círculos, rectángulos y triángulos,
+                            sin necesidad de utilizar una imagen externa.
+                        </p>
+
+                    <svg xmlns="http://w3.org" viewBox="0 0 100 60" width="100%" height="100%">
+                        <defs>
+                            <!-- Estilo global para las líneas del cuadro y componentes -->
+                            <style>
+                                .bike-line { stroke: #333333; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+                                .bike-wheel { stroke: #333333; stroke-width: 2.5; fill: none; }
+                            </style>
+                        </defs>
+
+                        <!-- Rueda Trasera (Izquierda) -->
+                        <circle cx="25" cy="40" r="15" class="bike-wheel" />
+                        <circle cx="25" cy="40" r="1.5" fill="#333333" />
+                        <!-- Rueda Delantera (Derecha) -->
+                        <circle cx="75" cy="40" r="15" class="bike-wheel" />
+                        <circle cx="75" cy="40" r="1.5" fill="#333333" />
+                        <!-- Cuadro y Mecanismos -->
+                        <!-- Eje trasero a Plato (Vaina inferior) -->
+                        <line x1="25" y1="40" x2="45" y2="40" class="bike-line" />
+                        <!-- Eje trasero a Sillín (Tirante) -->
+                        <line x1="25" y1="40" x2="40" y2="20" class="bike-line" />
+                        <!-- Plato a Sillín (Tubo de sillín) -->
+                        <line x1="45" y1="40" x2="40" y2="20" class="bike-line" />
+                        <!-- Plato a Manillar (Tubo diagonal) -->
+                        <line x1="45" y1="40" x2="65" y2="20" class="bike-line" />
+                        <!-- Sillín a Manillar (Tubo superior) -->
+                        <line x1="40" y1="20" x2="65" y2="20" class="bike-line" />
+                        <!-- Horquilla delantera (Manillar a Eje delantero) -->
+                        <line x1="68" y1="12" x2="75" y2="40" class="bike-line" />
+                        <!-- Componentes adicionales -->
+                        <!-- Sillín -->
+                        <path d="M 34 18 L 44 18" class="bike-line" stroke-width="2.5" />
+                        <!-- Manillar -->
+                        <path d="M 60 14 L 68 12 L 72 15" class="bike-line" />
+                        <!-- Plato / Pedalier -->
+                        <circle cx="45" cy="40" r="3.5" class="bike-line" stroke-width="1.5" />
+                        <!-- Pedal -->
+                        <line x1="45" y1="40" x2="49" y2="46" class="bike-line" stroke-width="1.5" />
+                        <line x1="46" y1="46" x2="52" y2="46" class="bike-line" stroke-width="2" />
+                    </svg>
+
+                </article>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Jose Antonio Rodriguez - Trabajo de HTML</p>
+    </footer>
+
+</body>
+</html>
