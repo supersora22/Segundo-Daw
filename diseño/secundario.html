@@ -8,19 +8,19 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #c7cdf4;
+            margin: 5px;
+            background-color: #f4e8c7;
             color: #ffffff;
         }
 
         header {
-            background-color: #382dfe;
+            background-color: #34fe2d;
             text-align: center;
             padding: 15px;
         }
 
         nav {
-            background-color: #5891f3;
+            background-color: #d958f3;
             padding: 10px;
             text-align: center;
         }
@@ -40,7 +40,7 @@
         }
 
         section .Cabezera_interior {
-        background-color: #5891f3;
+        background-color: #e658f3;
         padding: 10px;
         border-radius: 15px;
         }
@@ -55,7 +55,7 @@
         }
 
         article, aside {
-            background-color: #c2f9ef;
+            background-color: #d1f9c2;
             padding: 10px;
             margin: 20px 0;
             border-radius: 15px;
@@ -70,7 +70,7 @@
         }
 
         footer {
-            background-color: #5891f3;
+            background-color: #58f393;
             text-align: center;
             padding: 10px;
         }
@@ -103,7 +103,7 @@
                     <h3>iframe con un mapa de Google</h3>
                     <p>Otro uso de <code>iframe</code>: incrustar un servicio de terceros sin salir de la página.</p>
                     <iframe
-                        src="https://www.google.com/maps/search/Estepona+Spa/"
+                        src="https://maps.google.com/maps?q=Estepona+Spa&ll=36.4098235,-5.187025&z=16&output=embed"
                         width="600"
                         height="400"
                         style="border: 0;"
@@ -121,9 +121,9 @@
                     <p>Imagen vectorial externa declarada con <code>picture</code> y su <code>source</code>.</p>
 
                     <picture>
-                        <source srcset="Algeciras.jpg" type="image/svg+xml">
+                        <source srcset="puerto/Algeciras.jpg" type="image/svg+xml">
                         <img
-                            src="Algeciras.jpg"
+                            src="puerto/Algeciras.jpg"
                             alt="Puerto de Algeciras"
                             width="1200"
                             height="500"
@@ -137,7 +137,7 @@
                     <h3>object</h3>
                     <p>Recurso externo con contenido de respaldo dentro de la etiqueta, por si el navegador no lo abre.</p>
 
-                    <object data="/puerto/Trabajo Inicial Diseño_Jose.pdf" type="application/pdf" width="100%" height="500">
+                    <object data="puerto/Trabajo Inicial Diseño_Jose.pdf" type="application/pdf" width="100%" height="500">
                         <p>Tu navegador no puede ver el PDF. <a href="../Tema 1.-Planificación de interfaces gráficas_15_16.pdf">Descárgalo aquí</a>.</p>
                     </object>
                 </article>
@@ -160,7 +160,7 @@
                     <h3>embed</h3>
                     <p>Ejemplo de PDF embebido.</p>
 
-                    <embed src="/puerto/Trabajo Inicial Diseño_Jose.pdf" type="application/pdf" width="100%" height="500"></embed>
+                    <embed src="puerto/Trabajo Inicial Diseño_Jose.pdf" type="application/pdf" width="100%" height="500"></embed>
                 </aside>
             </div>
         </section>
